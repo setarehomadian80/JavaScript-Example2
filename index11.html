@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امروز چه روزیه؟</title>
+</head>
+<body>
+    <h1>روز های هفته </h1>
+    <button onclick="showDay()">نمایش روز</button>
+    <p id="result"></p>
+</body>
+<!-- <script>
+function showDay(){
+    let dayNumber = new Date().getDay();
+    let dayName = "";
+
+    switch (dayNumber){
+        case 0 : dayName = "یکشنبه";
+        break;
+         case 1 : dayName = "دوشنبه";
+         break;
+         case 2 : dayName = "سه شنبه";
+         break;
+         case 3 : dayName = "چهارشنبه";
+         break;
+         case 4 : dayName = "پنجشنبه";
+         break;
+         case 5 : dayName = "جمعه";
+         break;
+         case 6 : dayName = "شنبه";
+         break;
+         default:dayName = "خطا در دریافت روز"
+    }
+
+    document.getElementById("result").innerText = " امروز " + dayName +" است ";
+}
+</script> -->
+
+ <script>
+        const showDay = () => {
+            const days = ["یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه", "شنبه"];
+            const dayName = days[new Date().getDay()];
+            document.getElementById("result").innerText = `امروز ${dayName} است.`;
+        }
+    </script>
+</html>
