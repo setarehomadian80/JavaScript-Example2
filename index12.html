@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>سال تولدت را وارد کن</h1>
+    <input type="number" id="birthYear" placeholder="سال تولد">
+    <button onclick="calculatelife()">محاسبه</button>
+
+    <p id="result"></p>
+</body>
+
+<script>
+    function calculatelife(){
+        let birthYear = parseInt(document.getElementById("birthYear").value);
+
+    // گرفتن سال فعلی
+    let currentYear = new Date().getFullYear();
+    // اختلاف دو سال
+    let ageInYear = currentYear - birthYear;
+
+    // تبدیل یه روز و ساعت
+    let daysLived = ageInYear * 365;
+    let hoursLived = daysLived * 24;
+
+    // نمایش خروجی
+    document.getElementById("result").innerText = " شما تقریبا " + ageInYear + " سال و " + daysLived + " روز و " + hoursLived + " ساعت زندگی کردین "
+}
+</script>
+</html>
